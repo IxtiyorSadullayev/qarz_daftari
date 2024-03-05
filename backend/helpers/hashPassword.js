@@ -1,5 +1,5 @@
 const bcrypt = require("bcrypt");
-class HashPassword {
+class PasswordHelper {
     async generateHashPassword(password) {
         const hashpass = await bcrypt.hash(password, process.env.SALT);
         return hashpass;
@@ -11,4 +11,4 @@ class HashPassword {
     }
 }
 
-module.exports = HashPassword;
+module.exports = PasswordHelper;
